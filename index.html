@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gestión Comercial</title>
+<meta name="description" content="Clientes, cartera, inventario, cotizaciones y alarmas comerciales.">
+<meta name="theme-color" content="#173a63" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f1620" media="(prefers-color-scheme: dark)">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Gestión">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Sora:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar" aria-label="Menú principal">
+    <a class="brand" href="#inicio"><img src="img/logo.jpg" alt="" width="36" height="36"><span><b>Gestión Comercial</b><small>Audiología</small></span></a>
+    <button class="btn btn-primary btn-new" id="quick-btn" type="button"></button>
+    <nav id="side-nav"></nav>
+    <div class="side-foot"><button type="button" class="side-user" id="side-user" hidden></button><span id="sync-status" class="sync-chip"></span></div>
+  </aside>
+  <div class="main">
+    <header class="topbar">
+      <button class="icon-btn" id="back-btn" type="button" aria-label="Volver" hidden></button>
+      <h1 id="page-title" class="top-title">Inicio</h1>
+      <button class="user-btn" id="user-btn" type="button" aria-label="Usuario actual" hidden></button>
+      <button class="icon-btn" id="sync-btn" type="button" aria-label="Sincronizar"></button>
+    </header>
+    <main id="view" tabindex="-1"><div class="boot"><span class="spin"></span> Cargando…</div></main>
+  </div>
+  <nav class="tabbar" id="tabbar" aria-label="Navegación"></nav>
+  <button class="fab" id="fab" type="button" aria-label="Crear registro"></button>
+</div>
+<div id="modal-root"></div>
+<div id="toasts" aria-live="polite"></div>
+<noscript>Esta aplicación necesita JavaScript.</noscript>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
